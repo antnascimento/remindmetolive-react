@@ -44,9 +44,6 @@ export default function startExpress() {
 
   theapp.get('*', (req, res) => {
 
-    console.log("request url: ");
-    console.log(req.url);
-
     const context = {};
     const markup = renderToString(
       <StaticRouter location={req.url} context={context}>

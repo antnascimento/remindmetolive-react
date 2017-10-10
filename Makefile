@@ -34,4 +34,4 @@ docker-run:
 
  docker-push:
 	docker push danpersa/remindmetolive-nginx
-  docker push danpersa/remindmetolive-app
+	docker push danpersa/remindmetolive-app

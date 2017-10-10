@@ -1,0 +1,5 @@
+apps:
+  - script   : '/home/app/webapp/app.js'
+    name     : 'APP'
+    exec_mode: 'cluster'
+    instances: 4
