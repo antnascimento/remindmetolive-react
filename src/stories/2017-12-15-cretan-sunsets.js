@@ -1,11 +1,10 @@
 import React from 'react';
 import PostImageResp from '../components/story/PostImageResp';
 import TwoPostImageResp from '../components/story/TwoPostImageResp';
-import StoryPage from '../components/story/StoryPage';
+import StoryPageResp from '../components/story/StoryPageResp';
 import StoryTextBlock from '../components/story/StoryTextBlock';
 import StoryImages from '../components/story/StoryImages';
 import StoryIntro from '../components/story/StoryIntro';
-import buildSrcResp from '../components/story/buildSrcResp';
 import FullImageResp from '../components/story/FullImageResp';
 
 const imgDirPath = "stories/2017-12-15-cretan-sunsets";
@@ -18,12 +17,13 @@ class CretanSunsetsStory extends React.Component {
 
   render() {
     return (
-      <StoryPage logo={buildSrcResp(imgDirPath, "H", "wide", "11")}
-                 altLogo="Sunset in Crete"
-                 title="Cretan Sunsets"
-                 author="Dan"
-                 location="Crete, Greece"
-                 tags="travel, island, Greece">
+      <StoryPageResp logoNumber="11"
+                     dirPath={imgDirPath}
+                     altLogo="Sunset in Crete"
+                     title="Cretan Sunsets"
+                     author="Dan"
+                     location="Crete, Greece"
+                     tags="travel, island, Greece">
 
         <StoryIntro>
           We traveled to Crete this summer. The island is like a paradise, it has everything
@@ -224,7 +224,7 @@ class CretanSunsetsStory extends React.Component {
           <PostImageResp dirPath={imgDirPath} number="39" alt="Fortezza Castle, Rethimno" />
           <PostImageResp dirPath={imgDirPath} number="40" alt="Santa Maria delle Grazie, Milan" />
         </StoryImages>
-      </StoryPage>);
+      </StoryPageResp>);
   }
 }
 

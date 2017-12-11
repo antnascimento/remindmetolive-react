@@ -1,12 +1,10 @@
 import React from 'react';
 import PostImageResp from '../components/story/PostImageResp';
 import TwoPostImageResp from '../components/story/TwoPostImageResp';
-import FullImageResp from '../components/story/FullImageResp';
-import StoryPage from '../components/story/StoryPage';
+import StoryPageResp from '../components/story/StoryPageResp';
 import StoryTextBlock from '../components/story/StoryTextBlock';
 import StoryImages from '../components/story/StoryImages';
 import StoryIntro from '../components/story/StoryIntro';
-import buildSrcResp from '../components/story/buildSrcResp';
 
 const imgDirPath = "stories/2016-10-08-pisa-afterglow";
 
@@ -18,11 +16,12 @@ class PisaAfterglowStory extends React.Component {
 
   render() {
     return (
-      <StoryPage logo={buildSrcResp(imgDirPath, "L", "image", "01")}
-                 title="Pisa Afterglow"
-                 author="Dan & Ade"
-                 location="Pisa, Italy"
-                 tags="travel, Pisa, Italy, monuments">
+      <StoryPageResp logoNumber="01"
+                     dirPath={imgDirPath}
+                     title="Pisa Afterglow"
+                     author="Dan & Ade"
+                     location="Pisa, Italy"
+                     tags="travel, Pisa, Italy, monuments">
 
         <StoryIntro>
           When I close my eyes and visualize our time in Italy, I see everything in slow-motion.
@@ -48,11 +47,7 @@ class PisaAfterglowStory extends React.Component {
 
         <StoryImages>
           <PostImageResp dirPath={imgDirPath} number="01" />
-        </StoryImages>
 
-        <FullImageResp dirPath={imgDirPath} prefix="wide" number="01" />
-
-        <StoryImages>
           <TwoPostImageResp dirPath={imgDirPath}
                          number1="03"
                          number2="04" />
@@ -104,7 +99,7 @@ class PisaAfterglowStory extends React.Component {
                          number2="24" />
           <PostImageResp dirPath={imgDirPath} number="25" />
         </StoryImages>
-      </StoryPage>);
+      </StoryPageResp>);
   }
 }
 

@@ -1,11 +1,10 @@
 import React from 'react';
 import PostImageResp from '../components/story/PostImageResp';
 import TwoPostImageResp from '../components/story/TwoPostImageResp';
-import StoryPage from '../components/story/StoryPage';
+import StoryPageResp from '../components/story/StoryPageResp';
 import StoryTextBlock from '../components/story/StoryTextBlock';
 import StoryImages from '../components/story/StoryImages';
 import StoryIntro from '../components/story/StoryIntro';
-import buildSrcResp from '../components/story/buildSrcResp';
 import FullImageResp from '../components/story/FullImageResp';
 
 const imgDirPath = "stories/2017-11-20-top-10-milan";
@@ -18,12 +17,13 @@ class SummerInAmsterdamStory extends React.Component {
 
   render() {
     return (
-      <StoryPage logo={buildSrcResp(imgDirPath, "L", "wide", "04")}
-                 altLogo="The Milan Dome"
-                 title="Top 10 Milan"
-                 author="Dan"
-                 location="Milan, Italy"
-                 tags="travel, city, Italy">
+      <StoryPageResp logoNumber="04"
+                     dirPath={imgDirPath}
+                     altLogo="The Milan Dome"
+                     title="Top 10 Milan"
+                     author="Dan"
+                     location="Milan, Italy"
+                     tags="travel, city, Italy">
 
         <StoryIntro>
            A few weeks ago, I had the unique chance to visit Milan. I did
@@ -188,7 +188,7 @@ class SummerInAmsterdamStory extends React.Component {
                          alt2="Milan wall, trees and windows"/>
           <PostImageResp dirPath={imgDirPath} number="30" alt="Sforza Castle inner yard with lake, Milan" />
         </StoryImages>
-      </StoryPage>);
+      </StoryPageResp>);
   }
 }
 

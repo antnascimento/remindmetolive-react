@@ -2,11 +2,10 @@ import React from 'react';
 import PostImageResp from '../components/story/PostImageResp';
 import TwoPostImageResp from '../components/story/TwoPostImageResp';
 import FullImageResp from '../components/story/FullImageResp';
-import StoryPage from '../components/story/StoryPage';
+import StoryPageResp from '../components/story/StoryPageResp';
 import StoryTextBlock from '../components/story/StoryTextBlock';
 import StoryImages from '../components/story/StoryImages';
 import StoryIntro from '../components/story/StoryIntro';
-import buildSrcResp from '../components/story/buildSrcResp';
 import { Link } from 'react-router-dom';
 
 const imgDirPath = "stories/2016-06-30-bridges-of-florence";
@@ -15,12 +14,13 @@ class BridgesOfFlorenceStory extends React.Component {
 
   render() {
     return (
-      <StoryPage logo={buildSrcResp(imgDirPath, "L", "wide", "02")}
-                 altLogo="Santa Trinita Bridge in Florence"
-                 title="Bridges of Florence"
-                 author="Dan & Ade"
-                 location="Florence, Italy"
-                 tags="travel, Florence, Italy">
+      <StoryPageResp logoNumber="02"
+                     dirPath={imgDirPath}
+                     altLogo="Santa Trinita Bridge in Florence"
+                     title="Bridges of Florence"
+                     author="Dan & Ade"
+                     location="Florence, Italy"
+                     tags="travel, Florence, Italy">
 
         <StoryIntro>
           The <a href="https://en.wikipedia.org/wiki/Arno_River">Arno River</a> naturally
@@ -145,7 +145,7 @@ class BridgesOfFlorenceStory extends React.Component {
         <StoryImages>
           <PostImageResp dirPath={imgDirPath} number="23" alt="All Florence bridges" />
         </StoryImages>
-      </StoryPage>);
+      </StoryPageResp>);
   }
 }
 

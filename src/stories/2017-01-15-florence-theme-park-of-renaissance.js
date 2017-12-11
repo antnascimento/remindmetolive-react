@@ -3,11 +3,10 @@ import PostImageResp from '../components/story/PostImageResp';
 import TwoPostImageResp from '../components/story/TwoPostImageResp';
 import ThreePostImageResp from '../components/story/ThreePostImageResp';
 import FullImageResp from '../components/story/FullImageResp';
-import StoryPage from '../components/story/StoryPage';
+import StoryPageResp from '../components/story/StoryPageResp';
 import StoryTextBlock from '../components/story/StoryTextBlock';
 import StoryImages from '../components/story/StoryImages';
 import StoryIntro from '../components/story/StoryIntro';
-import buildSrcResp from '../components/story/buildSrcResp';
 import { Link } from 'react-router-dom';
 
 const imgDirPath = "stories/2017-01-15-florence-theme-park-of-renaissance";
@@ -16,11 +15,12 @@ class FlorenceThemeParkOfRenaissanceStory extends React.Component {
 
   render() {
     return (
-      <StoryPage logo={buildSrcResp(imgDirPath, "L", "image", "01")}
-                 title="Florence, Theme Park Of Renaissance"
-                 author="Dan & Ade"
-                 location="Florence, Italy"
-                 tags="travel, city, Florence, Italy">
+      <StoryPageResp logoNumber="03"
+                     dirPath={imgDirPath}
+                     title="Florence, Theme Park Of Renaissance"
+                     author="Dan & Ade"
+                     location="Florence, Italy"
+                     tags="travel, city, Florence, Italy">
 
         <StoryIntro title="Florence Cathedral">
           It's hard to find the right words when writing about the
@@ -181,7 +181,7 @@ class FlorenceThemeParkOfRenaissanceStory extends React.Component {
           <PostImageResp dirPath={imgDirPath} number="45" />
           <PostImageResp dirPath={imgDirPath} number="46" />
         </StoryImages>
-      </StoryPage>);
+      </StoryPageResp>);
   }
 }
 
